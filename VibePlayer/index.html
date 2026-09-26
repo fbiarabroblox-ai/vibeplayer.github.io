@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibes Player - Redirecting</title>
+    <h6>Redirecting...</h6>
+    <script>
+        // Проверяем, пройден ли сетап в localStorage
+        const isSetupDone = localStorage.getItem('setup_completed');
+
+        if (isSetupDone === 'true') {
+            // Если сетап уже пройден — кидаем на главную страницу плеера
+            window.location.href = 'player.html';
+        } else {
+            // Если первый запуск — кидаем на экран сетапа
+            window.location.href = 'setup.html';
+        }
+    </script>
+</head>
+<body>
+    <!-- Пустое тело, так как происходит мгновенный редирект -->
+</body>
+</html>
